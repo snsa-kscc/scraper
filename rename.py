@@ -1,7 +1,7 @@
 import os
 
-folder_paths = [f for f in os.listdir('./resize') if not f.startswith('.')]
-base_folder = './resize'
+base_folder = './folders'
+folder_paths = [f for f in os.listdir(base_folder) if not f.startswith('.')]
 
 for i in folder_paths:
 
