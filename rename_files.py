@@ -13,8 +13,7 @@ for i in folder_paths:
         second_last_char = base_filename[-2]
 
         if second_last_char == '_':
-            new_base_filename = base_filename[:-
-                                              2] + '-' + base_filename[-1]
+            new_base_filename = '-' + base_filename[-1]
             new_filename = i + new_base_filename + file_extension
             os.rename(os.path.join(folder_path, filename),
                       os.path.join(folder_path, new_filename))
