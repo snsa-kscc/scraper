@@ -15,20 +15,18 @@ wc_api = API(
     version='wc/v3'
 )
 
-new_attribute = {
-    'id': 7,
-    'name': 'sizechart',
-    'position': 5,
-    'visible': True,
-    'variation': False,
-    'options': ['SAUMAPP']
-}
+modified_attribute = {'id': 2,
+                      'options': ['Saucony Originals']
+                      }
 
-product_skus = ['SAM800197-BK']
+product_skus = ['S70463-6', 'S70512-2', 'S70512-3',
+                'S60368-128', 'S60368-160', 'S70404-32', 'S60405-38']
 for product_sku in product_skus:
     product = wc_api.get('products', params={'sku': product_sku}).json()[0]
     existing_attributes = product["attributes"]
-    existing_attributes.append(new_attribute)
+    for attribute in existing_attributes:
+        if attribute['id'] == modified_attribute['id']:
+            attribute.update(modified_attribute)
     product_id = product['id']
     payload = {"attributes": existing_attributes}
     wc_api.put(f"products/{product_id}", payload).json()
