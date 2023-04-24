@@ -19,8 +19,7 @@ modified_attribute = {'id': 2,
                       'options': ['Saucony Originals']
                       }
 
-product_skus = ['S70463-6', 'S70512-2', 'S70512-3',
-                'S60368-128', 'S60368-160', 'S70404-32', 'S60405-38']
+product_skus = ['S2108-790', 'S70532-1', 'S70555-4', 'S70555-5']
 for product_sku in product_skus:
     product = wc_api.get('products', params={'sku': product_sku}).json()[0]
     existing_attributes = product["attributes"]

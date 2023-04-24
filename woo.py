@@ -21,10 +21,11 @@ new_attribute = {
     'position': 5,
     'visible': True,
     'variation': False,
-    'options': ['SAUMAPP']
+    'options': ['SAUWAPP']
 }
 
-product_skus = ['SAM800197-BK']
+product_skus = ['SA81484-BK', 'SA81538-VCT',
+                'SA81750-MLT', 'SA81750-RWP', 'SAW800283-RED']
 for product_sku in product_skus:
     product = wc_api.get('products', params={'sku': product_sku}).json()[0]
     existing_attributes = product["attributes"]
