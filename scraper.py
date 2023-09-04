@@ -62,19 +62,19 @@ urls = ['S70424-8',
         'SA81538-VR',
         'SAM800058-DGH',
         'SAW800105-HTG',
-        'JAZZ DOUBLE HL',
-        'SK261010',
+        'JAZZ DOUBLE HL',  # fail
+        'SK261010',  # fail
         'SA81538-VS',
-        '368322002',
-        '368322001',
-        '6498273',
-        '3MD30111504',
-        '6198084',
-        'UQ3800g',
-        'UA5041e',
-        'UA5052e',
-        'UQ5360g',
-        'UA5690e']
+        '368322002',  # fail
+        '368322001',  # fail
+        '6498273',  # fail
+        '3MD30111504',  # fail
+        '6198084',  # fail
+        'UQ3800g',  # fail
+        'UA5041e',  # fail
+        'UA5052e',  # fail
+        'UQ5360g',  # fail
+        'UA5690e']  # fail
 
 for url in urls:
     for part in range(1, 6):
@@ -89,5 +89,15 @@ for url in urls:
             print(
                 f'Error {response.status_code}: Failed to download {filename}.')
         time.sleep(2)
+
+# for url in urls:
+#     response = requests.get(
+#         f'https://s7d4.scene7.com/is/image/WolverineWorldWide/{url}_1?wid=1000&hei=1000&resMode=bilin&op_usm=1.0,1.0,8,0&iccEmbed=0&printRes=72')
+#     if response.status_code == 200:
+#         print(f'Successfully catched {url}.')
+#     else:
+#         print(
+#             f'Error {response.status_code}: Failed to catch {url}.')
+#     time.sleep(2)
 
 print('Done.')
