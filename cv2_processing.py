@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-folder_path = './src'
+folder_path = './assets'
 
 resize_folder_path = os.path.join(folder_path, 'resize')
 if not os.path.exists(resize_folder_path):

@@ -21,15 +21,14 @@ new_attribute = {
     'position': 5,
     'visible': True,
     'variation': False,
-    'options': ['SAUWAPP']
+    'options': ['SAUMFTW']
 }
 
-product_skus = ['SA81484-BK', 'SA81538-VCT',
-                'SA81750-MLT', 'SA81750-RWP', 'SAW800283-RED']
+product_skus = ['S70665-3', 'S70665-14']
 for product_sku in product_skus:
     product = wc_api.get('products', params={'sku': product_sku}).json()[0]
     existing_attributes = product["attributes"]
     existing_attributes.append(new_attribute)
     product_id = product['id']
     payload = {"attributes": existing_attributes}
-    wc_api.put(f"products/{product_id}", payload).json()
+    print(wc_api.put(f"products/{product_id}", payload))

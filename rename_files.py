@@ -1,6 +1,6 @@
 import os
 
-base_folder = './src/resize'
+base_folder = './assets/resize'
 folder_paths = [f for f in os.listdir(base_folder) if not f.startswith('.')]
 
 for i in folder_paths:
