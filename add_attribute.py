@@ -21,12 +21,10 @@ new_attribute = {
     'position': 5,
     'visible': True,
     'variation': False,
-    'options': ['SAUMFTW']
+    'options': ['ONMFTW']
 }
 
-product_skus = ['S70671-3', 'S2108-828', 'S2108-826', 'S2044-667', 'S70674-2', 'S70665-2', 'S70665-13',
-                'S70665-11', 'S70665-6', 'S2044-654', 'S70404-49', 'S70613-13', 'S2044-648', 'S70539-20', 'S70665-1', 'S70404-50']
-
+product_skus = ['3999212', '2199567', '5499218', '3299262', '3599238']
 
 for product_sku in product_skus:
     product = wc_api.get('products', params={'sku': product_sku}).json()[0]
