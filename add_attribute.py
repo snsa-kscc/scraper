@@ -15,16 +15,37 @@ wc_api = API(
     version='wc/v3'
 )
 
+# new_attribute = {
+#     'id': 7,
+#     'name': 'sizechart',
+#     'position': 5,
+#     'visible': True,
+#     'variation': False,
+#     'options': ['ONMFTW']
+# }
+
 new_attribute = {
-    'id': 7,
-    'name': 'sizechart',
-    'position': 5,
+    'id': 5,
+    'name': 'Vrsta proizvoda',
+    'position': 1,
     'visible': True,
     'variation': False,
-    'options': ['ONMFTW']
+    'options': ['Tenisice']
 }
 
-product_skus = ['3999212', '2199567', '5499218', '3299262', '3599238']
+product_skus = [
+    'S20720-86',
+    'S10843-25',
+    'S20813-25',
+    'S10762-30',
+    'S20810-85',
+    'S20810-25',
+    'S20810-15',
+    'S20823-35',
+    'S20823-25',
+    'S20826-16',
+    'S20773-86'
+]
 
 for product_sku in product_skus:
     product = wc_api.get('products', params={'sku': product_sku}).json()[0]
