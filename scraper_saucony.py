@@ -76,8 +76,24 @@ import time
 #         'UQ5360g',  # fail
 #         'UA5690e']  # fail
 
-urls = ['S70700-1', 'S70665-3', 'S70665-14',
-        'S60690-2', 'S60690-1', 'S60530-21', 'S1044-668']
+urls = ['S20756-35',
+        'S20838-85',
+        'S20756-25',
+        'S20755-35',
+        'S20755-25',
+        'S10756-16',
+        'BS3166',
+        'BS2045 D',
+        'BS2045 C',
+        'BS2045 B',
+        'BS2045 A',
+        'BS2002 C',
+        'BS3151A',
+        'S20762-30',
+        'SAW800253-LPRA',
+        'S10392-4',
+        '001509-723',
+        '91662-20 - 051']
 
 for url in urls:
     for part in range(1, 6):
@@ -92,15 +108,5 @@ for url in urls:
             print(
                 f'Error {response.status_code}: Failed to download {filename}.')
         time.sleep(2)
-
-# for url in urls:
-#     response = requests.get(
-#         f'https://s7d4.scene7.com/is/image/WolverineWorldWide/{url}_1?wid=1000&hei=1000&resMode=bilin&op_usm=1.0,1.0,8,0&iccEmbed=0&printRes=72')
-#     if response.status_code == 200:
-#         print(f'Successfully catched {url}.')
-#     else:
-#         print(
-#             f'Error {response.status_code}: Failed to catch {url}.')
-#     time.sleep(2)
 
 print('Done.')

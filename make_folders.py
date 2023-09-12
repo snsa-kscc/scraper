@@ -1,13 +1,20 @@
 import os
 import shutil
 
-sku_model_dict = {'S70665-3': 'SAUCONY-ORIGINALSShadow-5000-muska-tenisica-S70665-3',
-                  'S1044-668': 'SAUCONY-ORIGINALSJazz-Original-zenska-tenisica-S1044-668',
-                  'S60530-21': 'SAUCONY-ORIGINALSJazz-Triple-zenska-tenisica-S60530-21',
-                  'S70665-14': 'SAUCONY-ORIGINALSShadow-5000-muska-tenisica-S70665-14',
-                  'S70700-1': 'SAUCONY-ORIGINALSShadow-6000-unisex-tenisica-S70700-1',
-                  'S60690-1': 'SAUCONY-ORIGINALSJazz-Triple-zenska-tenisica-S60690-1',
-                  'S60690-2': 'SAUCONY-ORIGINALSJazz-Triple-zenska-tenisica-S60690-2'}
+sku_model_dict = {'Z43203-44': 'SUN68-Ally-Bright-Nylon-zenske-tenisice-Z43203-44',
+                  'Z43202-31': 'SUN68-Ally-Gold-Girl-zenske-tenisice-Z43202-31',
+                  'Z43201-77': 'SUN68-Ally-Solid-zenske-tenisice-Z43201-77',
+                  'Z43201-34': 'SUN68-Ally-Solid-zenske-tenisice-Z43201-34',
+                  'Z43201-09': 'SUN68-Ally-Solid-zenske-tenisice-Z43201-09',
+                  'Z43104-74': 'SUN68-Tom-Classic-muske-tenisice-Z43104-74',
+                  'Z43104-07': 'SUN68-Tom-Classic-muske-tenisice-Z43104-07',
+                  'Z43102-11': 'SUN68-Tom-Fluo-muske-tenisice-Z43102-11',
+                  'Z43102-07': 'SUN68-Tom-Fluo-muske-tenisice-Z43102-07',
+                  'Z43101-74': 'SUN68-Tom-Solid-muske-tenisice-Z43101-74',
+                  'Z43101-70': 'SUN68-Tom-Solid-muske-tenisice-Z43101-70',
+                  'Z43101-08': 'SUN68-Tom-Solid-muske-tenisice-Z43101-08',
+                  'Z43101-07': 'SUN68-Tom-Solid-muske-tenisice-Z43101-07',
+                  'Z43101-01': 'SUN68-Tom-Solid-muske-tenisice-Z43101-01'}
 
 picture_folder_path = './assets/resize'
 
